@@ -3,7 +3,9 @@ type: ruby
 revision: 2013
 sources:
 - var
-authors: []
+authors:
+- name: trans
+  email: transfire@gmail.com
 organizations:
 - name: Rubyworks
 requirements: []
@@ -25,6 +27,7 @@ paths:
   load:
   - lib
 copyrights: []
+created: '2012-12-23'
 summary: Testbed project
 title: Test
 version: 0.0.1
