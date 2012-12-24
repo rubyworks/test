@@ -164,16 +164,20 @@ module Indexer
     #
     def to_gemspec
       if has_root?
-        Gem::Specification.new do |gemspec|
+        spec = Gem::Specification.new do |gemspec|
           to_gemspec_data(gemspec)
           to_gemspec_paths(gemspec)
         end
       else
-        Gem::Specification.new do |gemspec|
+        spec = Gem::Specification.new do |gemspec|
           to_gemspec_data(gemspec)
-          to_gemspec_paths(gemspec)
+          #to_gemspec_paths(gemspec)
         end
       end
+      if ENV['debug']
+        $stderr.puts "\n" + spec.to_yaml + "\n"
+      end
+      spec
     end
 
     #
