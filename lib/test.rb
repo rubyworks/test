@@ -1,1 +1,1 @@
-$TEST_LAODED = true
+$TEST_LOADED = true
